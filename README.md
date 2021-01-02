@@ -8,6 +8,7 @@ We are using the sklearn model that has been trained to predict housing prices i
 
 * Trello board: https://trello.com/b/mUbT2FcY/flask-ml-app
 * Project plan: https://docs.google.com/spreadsheets/d/1_ludRiFuehc02ILnTAxcOu0h7gAZlBLX_vyzvAXeHrw/edit?usp=sharing
+* Azure DevOps Project: https://dev.azure.com/system0961/MLAPP
 
 ## Instructions
 
