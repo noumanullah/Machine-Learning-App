@@ -12,7 +12,7 @@ We are using the sklearn model that has been trained to predict housing prices i
 ## Instructions
 
 * Architectural Diagram 
-![Screenshot](screen/cd-diagram.png)
+![Screenshot](screens/cd-diagram.png)
 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 Steps to configure ML Python App on Azure:
@@ -30,11 +30,11 @@ ssh-keygen -t ed25519 -C "youremailaddress@example.com"
 9. Open another cloud shell session from the button.
 10. Give rights to file using ```chmod +x make_prediction.sh ``` and then run ``` .\make_predisction.sh ```
 11. It will display output like this 
-![Screenshot](screen/pred.png)
+![Screenshot](screens/pred.png)
 12. To upload app on the Azure Web App use command ``` az webapp up -n fmlapp ```
 13. Edit the file make_predict_azure_app.sh with the webapp name you provided above and then save file.
 14. Now you provide the permission to the make_predict_azure_app.sh file and then run ``` ./make_predict_azure_app.sh ``` to verify prediction result from Azure WebApp
-![Screenshot](screen/testprod.png)
+![Screenshot](screens/testprod.png)
 15. Check log trail via both options
    - Run command ``` az webapp log tail ```
    - Open this url in browser https://fmlapp.scm.azurewebsites.net/api/logs/docker
@@ -70,17 +70,18 @@ jobs:
 
 ```
 3. Edit code to see if CI is successful
-
+![Screenshot](screens/ci.png)
 
 Steps to configure Continues delivery with Github + Azure Pipelines
 1. Create project in Azure DevOps
 2. Go to Project settings and create new service connections with selected subscription
-3. Go to pipelines of project and create new
-4. select where your code is, in our case its GitHub
+3. Go to pipelines of project and create new pipelines
+4. Select where your code is, in our case its GitHub
 5. Select the repo
 6. Authorize GitHub to use the repo
-7. Select Python web app for Linux
-8. Edit pipelines for lint and test
+7. Select "Python web app for Linux"
+8. Edit pipelines for lint and test (you can also use make all install of these three make lines
+```
     - script: |
         python -m venv antenv
         source antenv/bin/activate
@@ -89,26 +90,12 @@ Steps to configure Continues delivery with Github + Azure Pipelines
         make test
       workingDirectory: $(projectRoot)
       displayName: "Install, lint and Test"
-10. Same and Run YAML
-11. insert invalid var in app.py
-12. Add approval system via environment
-13. test sklearn predict service via cloud shell
-
-
-* Project running on Azure App Service
-
-* Project cloned into Azure Cloud Shell
-
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
-
-* Output of a test run
-
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
-
-* Running Azure App Service from Azure Pipelines automatic deployment
-
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
+```
+9. Save and Run YAML
+10. Once successful you will see the results like this
+![Screenshot](screens/cd.png)
+13. Test sklearn predict service via cloud shell
+![Screenshot](screens/testprod.png)
 
 ```bash
 (.mlapp) it@Azure:~/mlapp$ ./make_predict_azure_app.sh
@@ -117,8 +104,8 @@ Port: 443
 ```
 
 * Output of streamed log files from deployed application
+![Screenshot](screens/log.png)
 
-> 
 
 ## Enhancements
 
@@ -126,6 +113,6 @@ This project could be extended to any pre-trained machine learning model, such a
 
 ## Demo 
 
-<TODO: Add link Screencast on YouTube>
+You can view the demo to configure the app from the Youtube @ https://www.youtube.com/watch?v=Cgw54ow4KwI
 
 
