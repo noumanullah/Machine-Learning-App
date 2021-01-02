@@ -18,11 +18,11 @@ We are using the sklearn model that has been trained to predict housing prices i
 Steps to configure ML Python App on Azure:
 1. Login Azure Portal & open Cloud Shell
 2. Add SSH Key on GitHub from cloud shell run
-ssh-keygen -t ed25519 -C "youremailaddress@example.com"
+``` ssh-keygen -t ed25519 -C "youremailaddress@example.com" ```
 3. Go to Github settings -> Add SSH and save the input file generated from above command
 4. Clone Repo using git clone 
 5. Run command make setup to create environment
-6. Activate environment using command source ~/.mlapp/bin/activate
+6. Activate environment using command ``` source ~/.mlapp/bin/activate ```
 5. Run command ``` make install ```- to install requirements
 6. Run command ``` make lint ```- to check code errors
 7. Run command ``` make test - to test functions
