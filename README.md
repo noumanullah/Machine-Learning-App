@@ -1,5 +1,5 @@
 # Overview
-Flash Machine Learning Application
+Flask Machine Learning Application
 This project is a Python-based machine learning application using the Flask web framework, with a deployable Machine Learning Microservice API using Azure DevOps pipelines and GitHub repo with continuous delivery.
 
 We are using the sklearn model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. 
