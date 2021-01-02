@@ -114,6 +114,6 @@ This project could be extended to any pre-trained machine learning model, such a
 
 ## Demo 
 
-You can view the demo to configure the app from the Youtube @ https://youtu.be/NHdcu49CzOU
+You can view the demo at https://youtu.be/Q1s3SyrPGn8 and the detailed video to configure the app from the Youtube @ https://youtu.be/NHdcu49CzOU
 
 
