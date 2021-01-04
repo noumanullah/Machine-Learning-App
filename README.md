@@ -40,7 +40,7 @@ Steps to configure ML Python App on Azure:
 13. Edit the file make_predict_azure_app.sh with the webapp name you provided above and then save file.
 14. Now you provide the permission to the make_predict_azure_app.sh file and then run ``` ./make_predict_azure_app.sh ``` to verify prediction result from Azure WebApp
 ![Screenshot](screens/testprod.png)
-15. Check log trail via both options
+15. Check log trail via both options, these Azure CLI commands can be found in a bash file "commands.sh" as well.
    - Run command ``` az webapp log tail ```
    - Open this url in browser https://fmlapp.scm.azurewebsites.net/api/logs/docker
 
