@@ -1,5 +1,6 @@
 # Overview
-Flask Machine Learning Application
+Flask Machine Learning Application ![ML APP](https://github.com/noumanullah/mlapp/workflows/ML%20APP/badge.svg)
+
 This project is a Python-based machine learning application using the Flask web framework, with a deployable Machine Learning Microservice API using Azure DevOps pipelines and GitHub repo with continuous delivery.
 
 We are using the sklearn model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. 
@@ -22,17 +23,20 @@ Steps to configure ML Python App on Azure:
 ``` ssh-keygen -t ed25519 -C "youremailaddress@example.com" ```
 3. Go to Github settings -> Add SSH and save the input file generated from above command
 4. Clone Repo using git clone 
+![Screenshot](screens/clone.png)
 5. Run command make setup to create environment
 6. Activate environment using command ``` source ~/.mlapp/bin/activate ```
 5. Run command ``` make install ```- to install requirements
 6. Run command ``` make lint ```- to check code errors
-7. Run command ``` make test - to test functions
+7. Run command ``` make test ``` - to test functions, you can also run ``` make all ``` command and get the output like below
+![Screenshot](screens/makealln.png)
 8. To run the app use ``` python3 app.py ```
 9. Open another cloud shell session from the button.
 10. Give rights to file using ```chmod +x make_prediction.sh ``` and then run ``` .\make_predisction.sh ```
 11. It will display output like this 
 ![Screenshot](screens/pred.png)
-12. To upload app on the Azure Web App use command ``` az webapp up -n fmlapp ```
+12. To upload app on the Azure Web App use command ``` az webapp up -n fmlapp ```, once app is deployed fine you can open it from browser.
+![Screenshot](screens/webhost.png)
 13. Edit the file make_predict_azure_app.sh with the webapp name you provided above and then save file.
 14. Now you provide the permission to the make_predict_azure_app.sh file and then run ``` ./make_predict_azure_app.sh ``` to verify prediction result from Azure WebApp
 ![Screenshot](screens/testprod.png)
