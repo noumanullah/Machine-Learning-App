@@ -111,6 +111,8 @@ Port: 443
 * Output of streamed log files from deployed application
 ![Screenshot](screens/log.png)
 
+* For the load and stress testing you can use locustfile.py
+![Screenshot](screens/locust.png)
 
 ## Enhancements
 
